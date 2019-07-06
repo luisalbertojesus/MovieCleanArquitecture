@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/bgTitleRight"
+    android:paddingBottom="20dp"
+    android:paddingEnd="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="20dp"
+    android:paddingStart="15dp"
+    android:paddingTop="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_popularity"
+        style="@style/TitleBadgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="2532"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        style="@style/TitleBadgeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_popularity"
+        android:layout_alignLeft="@id/tv_popularity"
+        android:layout_alignStart="@id/tv_popularity"
+        android:text="@string/popularity" />
+
+    <TextView
+        android:id="@+id/tv_vote_count"
+        style="@style/TitleBadgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="855" />
+
+    <TextView
+        style="@style/TitleBadgeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_vote_count"
+        android:layout_alignLeft="@id/tv_vote_count"
+        android:layout_alignStart="@id/tv_vote_count"
+        android:text="@string/vote_count" />
+
+    <TextView
+        android:id="@+id/tv_vote_average"
+        style="@style/TitleBadgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="4.5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        style="@style/TitleBadgeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_vote_average"
+        android:layout_alignLeft="@id/tv_vote_average"
+        android:layout_alignStart="@id/tv_vote_average"
+        android:text="@string/vote_average" />
+
+</RelativeLayout>
