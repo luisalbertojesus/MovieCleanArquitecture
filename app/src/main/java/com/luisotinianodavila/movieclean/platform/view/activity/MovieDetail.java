@@ -3,6 +3,7 @@ package com.luisotinianodavila.movieclean.platform.view.activity;
 import android.app.Activity;
 import android.content.Intent;
 
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,8 +47,6 @@ public class MovieDetail extends BaseActivity implements MovieMVP.ViewMovieDetai
 
     @Override
     public void initView() {
-        //Toast.makeText(this, "movieId -> " + getMovieFlagKey(), Toast.LENGTH_SHORT).show();
-
         this.initializeDagger();
         this.initializePresenter();
     }
@@ -106,9 +105,9 @@ public class MovieDetail extends BaseActivity implements MovieMVP.ViewMovieDetai
     @Override
     public void descargarPosterPath(String posterPath) {
         Picasso.with(this)
-                .load(posterPath)
-                .placeholder(R.drawable.ic_launcher_background)
-                .into(imagen);
+        .load(posterPath)
+        .placeholder(R.drawable.ic_launcher_background)
+        .into(imagen);
     }
 
     @Override
