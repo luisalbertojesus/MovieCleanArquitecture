@@ -32,11 +32,6 @@ public class MovieList extends BaseActivity implements MovieMVP.View {
     Presenter presenter;
 
     MoviesAdapter adapter;
-    /*@BindView(R.id.recyclerView)
-    RecyclerView recyclerView;
-
-    @BindView(R.id.progressBar)
-    ProgressBar progressBar;*/
 
     RecyclerView recyclerView;
 
@@ -81,12 +76,6 @@ public class MovieList extends BaseActivity implements MovieMVP.View {
         recyclerView.setAdapter(adapter);
     }
 
-    /*
-    public static Intent launch(Context context) {
-        Intent callingIntent = new Intent(context, ListSearchActivity2.class);
-        return callingIntent;
-    }*/
-    //https://www.programcreek.com/java-api-examples/?class=android.support.v7.widget.SearchView&method=setSearchableInfo
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -100,7 +89,6 @@ public class MovieList extends BaseActivity implements MovieMVP.View {
         searchView.setSubmitButtonEnabled(true);
         searchView.setMaxWidth(Integer.MAX_VALUE);
         searchView.requestFocus();
-        //searchView.setQueryHint("Enter Movie name...");
 
         this.viewReady();
         return super.onCreateOptionsMenu(menu);
@@ -108,7 +96,6 @@ public class MovieList extends BaseActivity implements MovieMVP.View {
 
     @Override
     protected void onDestroy() {
-        //unbinder.unbind();
         presenter.destroy();
         super.onDestroy();
     }
@@ -146,9 +133,6 @@ public class MovieList extends BaseActivity implements MovieMVP.View {
 
     @Override
     public void navigateToDetailMovie(int movieId) {
-
-        Toast.makeText(this, "ID Movie: "+movieId, Toast.LENGTH_SHORT).show();
-
         Navigator navigator = new Navigator();
         navigator.navigateToMovieDetails(this, movieId);
     }
